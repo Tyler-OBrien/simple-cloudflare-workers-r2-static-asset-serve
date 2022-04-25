@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "simple-cloudflare-workers-r2-static-asset-serve",
+  "version": "1.0.0",
+  "description": "Serves static assets from the cloudflare workers r2",
+  "main": "index.js",
+  "scripts": {
+		"dev": "npx miniflare --kv-persist -w",
+		"publish": "wrangler publish"
+  },
+  "author": "RealChaika <94197210+RealChaika@users.noreply.github.com>",
+  "license": "MIT"
+}

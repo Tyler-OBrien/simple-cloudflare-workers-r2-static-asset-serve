@@ -1,0 +1,17 @@
+name = "r2-static-asset-serve"
+type = "javascript"
+
+account_id = "6b9f7e0e1478562986a4db3cf9fcfac3"
+workers_dev = true
+compatibility_date = "2022-04-22"
+
+[build.upload]
+format = "modules"
+dir = "./src"
+main = "./index.mjs"
+
+
+
+[[r2_buckets]]
+bucket_name = "bucket-test"
+binding = "R2_BUCKET"
