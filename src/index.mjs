@@ -14,11 +14,7 @@ export default {
       // Slice off the leading '/'
       pathname = pathname.slice(1)
 
-      let file
-      // Right now R2 will throw an internal exception if the file doesn't exist, it should just return null when eventually when that is fixed.
-      try {
-        file = await env.R2_BUCKET.get(pathname)
-      } catch {}
+      const file = await env.R2_BUCKET.get(pathname)
       if (file === undefined || file === null) {
         return new Response(
           JSON.stringify({
